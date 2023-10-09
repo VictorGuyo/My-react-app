@@ -1,3 +1,5 @@
+import React from "react";
+
 const pokemonList = [
     {
       name: "bulbasaur",
@@ -7,15 +9,20 @@ const pokemonList = [
       name: "mew",
     },
   ];
-  
-  function PokemonCard({pokemon}) {
-    const imageSrc = pokemon.imgSrc ? pokemon.imgSrc : '???';
-
-    return <figure>
-        <img src={imageSrc}
-        alt={pokemon.name} />
+  const PokemonCard = () => {
+  const pokemon = pokemonList[1];
+    return (
+      <figure>
+       {
+       pokemon.imgSrc !== undefined ? (
+       <img src={pokemon.imgSrc} alt={pokemon.name} /> 
+       ) : (
+       <p>????</p>
+       )
+       }
         <figcaption>{pokemon.name}</figcaption>
-    </figure>;
-}
+    </figure>
+    );
+      };
 
 export default PokemonCard;
