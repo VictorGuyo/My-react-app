@@ -43,7 +43,7 @@ function App() {
   return (
     <div>
       <PokemonCard pokemon={pokemonL} />
-      {pokemonIndex < pokemonList.length > 0 ? (
+      {pokemonIndex > 0 ? (
         <button onClick={handleClickLess}>Précédent</button>
       ) : (
         <p></p>
