@@ -20,7 +20,7 @@ import PropTypes from "prop-types";
     );
       };
 
-      PokemonCard.PropTypes = {
+      PokemonCard.propTypes = {
         pokemon: PropTypes.shape
         ({
           name: PropTypes.string.isRequired,
