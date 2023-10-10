@@ -13,8 +13,6 @@ PokemonCard.PropTypes = {
   }).isRequired
 }
 
-console.log(pokemon)
-
     return (
       <figure>
        {
