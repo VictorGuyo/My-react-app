@@ -1,7 +1,7 @@
 import "../src/App.css";
 import NavBar from "./components/NavBar";
 import PokemonCard from "./components/PokemonCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const pokemonList = [
   {
@@ -34,9 +34,10 @@ function App() {
   const pokemon = pokemonList[pokemonIndex];
 
   const handleClick = (index) => {
-    setPokemonIndex(index);
+    setPokemonIndex(index), index==3 && alert("pika pika") ;
   };
 
+  useEffect (() => {alert("Salut les Quickos")},[]);
 
 
   return (

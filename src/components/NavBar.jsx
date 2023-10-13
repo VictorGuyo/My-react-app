@@ -1,15 +1,15 @@
 function NavBar({ handleClick, pokemonList }) {
-    
+  const pikachu = "pikachu";
   return (
     <div>
-      {pokemonList.map((callback, index) => (
-        <button key={callback.name} 
-         onClick= {() => handleClick(index)}>{callback.name}
+      {pokemonList.map((poke, index) => (
+        <button key={poke.name} onClick={() => handleClick(index)}>{poke.name}
         </button>
+       
       ))}
     </div>
 
-// pokemon.name = pokemon.imgSrc
+    // pokemon.name = pokemon.imgSrc
 
     // <div>
     //   {pokemonIndex > 0 ? (
