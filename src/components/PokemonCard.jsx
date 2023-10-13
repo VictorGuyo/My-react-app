@@ -1,15 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styles from './MyComponent.module.css'
 
 
 
   const PokemonCard = ({pokemon}) => {
 
     return (
-      <figure>
+      <figure className={styles.styles}>
        {
        pokemon.imgSrc !== undefined ? (
-       <img src={pokemon.imgSrc} alt={pokemon.name} /> 
+       <img className={styles.card} src={pokemon.imgSrc} alt={pokemon.name} /> 
        ) : (
        <p>????</p>
        )
